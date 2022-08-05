@@ -49,7 +49,7 @@ const Home: NextPage = () => {
             </p>
             <a
               className='mt-3 text-sm underline cursor-pointer text-violet-500 decoration-dotted underline-offset-2'
-              href='https://github.com/deatryde'
+              href='https://github.com/irahuldogra'
               target='_blank'
               rel='noreferrer'
             >
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
             </p>
             <a
               className='mt-3 text-sm underline cursor-pointer text-violet-500 decoration-dotted underline-offset-2'
-              href='https://twitter.com/deatryde'
+              href='https://twitter.com/_rahuldogra'
               target='_blank'
               rel='noreferrer'
             >
