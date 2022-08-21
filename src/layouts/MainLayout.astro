@@ -1,0 +1,25 @@
+---
+import Navbar from "../components/Navbar";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="icon" type="image/x-icon" href="/logo.png" />
+        <meta
+            name="description"
+            content="Rahul Dogra • Modern Software Engineering Website"
+        />
+        <title>
+            {Astro.props.title}
+        </title>
+    </head>
+
+    <body class="bg-neutral-900">
+        <Navbar client:visible />
+        <!-- <div id="progress-bar" class="fixed top-0 left-0 right-0 h-2.5 origin-left bg-red-500"></div> -->
+        <slot />
+    </body>
+</html>
