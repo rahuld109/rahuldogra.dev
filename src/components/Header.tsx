@@ -1,5 +1,6 @@
 import type { ReactElement, FC, MouseEventHandler } from 'react';
 import { useState } from 'react';
+import { LogoSVG } from '../assets';
 
 type Display = 'hidden' | 'block';
 
@@ -7,28 +8,6 @@ interface ItemInterface {
   name: string;
   link?: string;
 }
-
-const LogoSVG = (): ReactElement => (
-  <svg
-    width='30'
-    height='30'
-    viewBox='0 0 75.59054435220287 75.39728547727759'
-    className='css-1j8o68f'
-  >
-    <defs id='SvgjsDefs2883'></defs>
-    <g
-      id='SvgjsG2884'
-      transform='matrix(0.7719934992729088,0,0,0.7719934992729088,-2.2241133037993865,-2.2827847906021383)'
-      fill='#c8e7ed'
-    >
-      <g xmlns='http://www.w3.org/2000/svg'>
-        <path d='M2.881,59.625v25.604l22.175,12.803L47.23,85.229V59.625L25.056,46.822L2.881,59.625z M37.778,79.772l-12.722,7.345   l-12.723-7.345v-14.69l12.723-7.346l12.722,7.346V79.772z'></path>
-        <path d='M72.556,15.759L50.381,2.957L28.206,15.76v25.605l22.175,12.803l22.175-12.803V15.759z M63.104,35.907l-12.723,7.346   l-12.722-7.346v-14.69l12.722-7.346l12.723,7.346V35.907z'></path>
-        <path d='M75.707,46.822L53.531,59.625v25.604l22.175,12.803l22.175-12.803V59.625L75.707,46.822z M88.429,79.772l-12.723,7.345   l-12.723-7.345v-14.69l12.724-7.346l12.722,7.346V79.772z'></path>
-      </g>
-    </g>
-  </svg>
-);
 
 const BurgerSVG = (): ReactElement => (
   <svg
@@ -59,8 +38,8 @@ const MenuItem: FC<ItemInterface> = ({ link = '#', name }): ReactElement => {
   );
 };
 
-const Navbar: FC = (): ReactElement => {
-  const [openMenu, setopenMenu] = useState<Display>('hidden');
+const Header: FC = (): ReactElement => {
+  const [openMenu, setOpenMenu] = useState<Display>('hidden');
 
   const ITEMS: ItemInterface[] = [
     { name: 'Home', link: '/' },
@@ -70,14 +49,14 @@ const Navbar: FC = (): ReactElement => {
   ];
 
   const handleMenuClick: MouseEventHandler<HTMLButtonElement> = (): void => {
-    setopenMenu(openMenu === 'hidden' ? 'block' : 'hidden');
+    setOpenMenu(openMenu === 'hidden' ? 'block' : 'hidden');
   };
 
   return (
-    <nav className='text-white px-2 sm:px-4 py-2.5'>
+    <header className='text-white px-2 sm:px-4 py-2.5'>
       <div className='container flex flex-wrap justify-between items-center mx-auto'>
         <div className='flex items-center'>
-          <LogoSVG />
+          <LogoSVG width='30' height='30' />
           <span className='px-2 self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
             Rahul <span className='text-rose-500'>Dogra</span>
           </span>
@@ -91,16 +70,16 @@ const Navbar: FC = (): ReactElement => {
           <BurgerSVG />
         </button>
 
-        <div className={`w-full md:block md:w-auto ` + openMenu}>
+        <nav className={`w-full md:block md:w-auto ` + openMenu}>
           <ul className='flex flex-col p-4 mt-4 rounded-lg border md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:text-white bg-neutral-800 md:dark:bg-grey-800 border-red-500'>
             {ITEMS.map((item) => (
               <MenuItem key={item.name} name={item.name} link={item.link} />
             ))}
           </ul>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 };
 
-export default Navbar;
+export default Header;

@@ -1,5 +1,6 @@
 ---
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 ---
 
 <html lang="en">
@@ -18,8 +19,8 @@ import Navbar from "../components/Navbar";
     </head>
 
     <body class="bg-neutral-900">
-        <Navbar client:visible />
-        <!-- <div id="progress-bar" class="fixed top-0 left-0 right-0 h-2.5 origin-left bg-red-500"></div> -->
+        <Header client:visible />
         <slot />
+        <Footer />
     </body>
 </html>
