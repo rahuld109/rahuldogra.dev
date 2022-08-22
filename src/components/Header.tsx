@@ -1,13 +1,8 @@
 import type { ReactElement, FC, MouseEventHandler } from 'react';
+import type { ItemInterface, Display } from 'src/constants';
 import { useState } from 'react';
-import { LogoSVG } from '../assets';
-
-type Display = 'hidden' | 'block';
-
-interface ItemInterface {
-  name: string;
-  link?: string;
-}
+import { WebsiteLogo } from '../assets';
+import { ITEMS } from 'src/constants';
 
 const BurgerSVG = (): ReactElement => (
   <svg
@@ -41,22 +36,15 @@ const MenuItem: FC<ItemInterface> = ({ link = '#', name }): ReactElement => {
 const Header: FC = (): ReactElement => {
   const [openMenu, setOpenMenu] = useState<Display>('hidden');
 
-  const ITEMS: ItemInterface[] = [
-    { name: 'Home', link: '/' },
-    { name: 'About', link: '/about' },
-    { name: 'Work', link: '/work' },
-    { name: 'Contact', link: '/contact' },
-  ];
-
   const handleMenuClick: MouseEventHandler<HTMLButtonElement> = (): void => {
     setOpenMenu(openMenu === 'hidden' ? 'block' : 'hidden');
   };
 
   return (
     <header className='text-white px-2 sm:px-4 py-2.5'>
-      <div className='container flex flex-wrap justify-between items-center mx-auto'>
+      <div className='container flex flex-wrap justify-between items-center'>
         <div className='flex items-center'>
-          <LogoSVG width='30' height='30' />
+          <WebsiteLogo width='30' height='30' />
           <span className='px-2 self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
             Rahul <span className='text-rose-500'>Dogra</span>
           </span>
@@ -64,7 +52,7 @@ const Header: FC = (): ReactElement => {
         <button
           type='button'
           className='inline-flex items-center p-2 ml-3 text-sm rounded-lg md:hidden  focus:outline-none focus:ring-2  text-rose-500 hover:bg-grey-800 focus:ring-rose-600'
-          onClick={(e) => handleMenuClick(e)}
+          onClick={handleMenuClick}
         >
           <span className='sr-only'>Open main menu</span>
           <BurgerSVG />
