@@ -20,30 +20,26 @@ const Contact: FC = (): ReactElement => {
             value='You did it. I will get back to you soon enough.'
           />
           <div className='my-3'>
-            <label
-              htmlFor='large-input'
-              className='block mb-2 text-md font-medium'
-            >
+            <label htmlFor='name' className='block mb-2 text-md font-medium'>
               Full Name <span className='text-rose-500 font-bold '> * </span>
             </label>
             <input
               className='block p-4 w-full bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
               required
               type='text'
+              id='name'
               name='name'
               placeholder='Full Name'
             />
           </div>
           <div className='my-3'>
-            <label
-              htmlFor='large-input'
-              className='block mb-2 text-md font-medium'
-            >
+            <label htmlFor='email' className='block mb-2 text-md font-medium'>
               Email <span className='text-rose-500 font-bold '> * </span>
             </label>
             <input
               className='block p-4 w-full bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
               type='email'
+              id='email'
               name='email'
               placeholder='Email Address'
               required
@@ -51,7 +47,7 @@ const Contact: FC = (): ReactElement => {
           </div>
           <div className='my-3'>
             <label
-              htmlFor='large-input'
+              htmlFor='attachment'
               className='block mb-2 text-md font-medium'
             >
               Attach a file (max. 8 MB)
@@ -59,28 +55,27 @@ const Contact: FC = (): ReactElement => {
             <input
               className='block p-4 w-full bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
               type='file'
+              id='attachment'
               name='attachment'
               accept='image/png, image/jpeg, application/pdf'
             />
           </div>
           <div className='my-3'>
-            <label
-              htmlFor='large-input'
-              className='block mb-2 text-md font-medium'
-            >
+            <label htmlFor='message' className='block mb-2 text-md font-medium'>
               Message
             </label>
             <textarea
               className='block p-4 w-full bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
               rows={4}
               cols={50}
+              id='message'
               name='message'
               placeholder='Message'
             />
           </div>
           <div className='my-3 flex items-center justify-center'>
             <button
-              className='bg-rose-500 rounded-lg px-5 py-2 my-2 w-full font-bold hover:bg-rose-600'
+              className='bg-rose-600 rounded-lg px-5 py-2 my-2 w-full font-bold hover:bg-rose-600'
               type='submit'
             >
               Send
