@@ -9,7 +9,7 @@ export const ITEMS: ItemInterface[] = [
 
 export const PROFILES: ItemInterface[] = [
   { name: 'Software Engineering' },
-  { name: 'Creative Technology' },
+  { name: 'Full Stack Technology' },
   { name: 'Game Development' },
 ];
 

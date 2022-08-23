@@ -1,5 +1,5 @@
 import { ITEMS, PROFILES } from 'src/constants';
-import { WebsiteLogo, TWitterLogo, LinkedInLogo, GithubLogo } from 'src/assets';
+import { WebsiteSVG, TwitterSVG, LinkedInSVG, GithubSVG } from 'src/assets';
 
 const CopyrightSection = () => (
   <div
@@ -17,9 +17,9 @@ const CopyrightSection = () => (
         </li>
       </ul>
       <div id='socials' className='grid grid-cols-3 gap-2'>
-        <TWitterLogo />
-        <LinkedInLogo />
-        <GithubLogo />
+        <TwitterSVG />
+        <LinkedInSVG />
+        <GithubSVG />
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@ const Footer = () => {
             id='logo'
             className='flex flex-col self-start my-5 md:my-0 md:self-center tracking-normal justify-between items-center row-span-3 col-start-2 md:col-start-1'
           >
-            <WebsiteLogo width='100' height='100' />
+            <WebsiteSVG width='100' height='100' />
             <span className='px-2 self-center text-2xl font-semibold whitespace-nowrap'>
               Rahul <span className='text-rose-500'>Dogra</span>
             </span>
@@ -47,14 +47,14 @@ const Footer = () => {
             <ul id='profiles' className='flex flex-col gap-2'>
               {ITEMS.map((item, index) => (
                 <li id={`link` + index} key={item.name}>
-                  <a href='/'>{item.name}</a>
+                  <a href={item.link}>{item.name}</a>
                 </li>
               ))}
             </ul>
           </div>
 
           <div className='md:col-start-4'>
-            <ul id='others' className='flex flex-col gap-2 align-top'>
+            <ul id='others' className='flex flex-col gap-2'>
               <li>
                 <a href='/'>
                   <span>Curriculum</span>
