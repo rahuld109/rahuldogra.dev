@@ -21,10 +21,10 @@ const Contact: FC = (): ReactElement => {
           />
           <div className='my-3'>
             <label htmlFor='name' className='block mb-2 text-md font-medium'>
-              Full Name <span className='text-rose-500 font-bold '> * </span>
+              Full Name <span className='text-red-500 font-bold '> * </span>
             </label>
             <input
-              className='block p-4 w-full bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
+              className='block p-4 w-full dark:bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
               required
               type='text'
               id='name'
@@ -34,10 +34,10 @@ const Contact: FC = (): ReactElement => {
           </div>
           <div className='my-3'>
             <label htmlFor='email' className='block mb-2 text-md font-medium'>
-              Email <span className='text-rose-500 font-bold '> * </span>
+              Email <span className='text-red-500 font-bold '> * </span>
             </label>
             <input
-              className='block p-4 w-full bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
+              className='block p-4 w-full dark:bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
               type='email'
               id='email'
               name='email'
@@ -53,7 +53,7 @@ const Contact: FC = (): ReactElement => {
               Attach a file (max. 8 MB)
             </label>
             <input
-              className='block p-4 w-full bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
+              className='block p-4 w-full dark:bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
               type='file'
               id='attachment'
               name='attachment'
@@ -65,7 +65,7 @@ const Contact: FC = (): ReactElement => {
               Message
             </label>
             <textarea
-              className='block p-4 w-full bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
+              className='block p-4 w-full dark:bg-neutral-800 rounded-lg border border-neutral-300 sm:text-md focus:ring-neutral-500 focus:border-neutral-500'
               rows={4}
               cols={50}
               id='message'
@@ -75,7 +75,7 @@ const Contact: FC = (): ReactElement => {
           </div>
           <div className='my-3 flex items-center justify-center'>
             <button
-              className='bg-rose-600 rounded-lg px-5 py-2 my-2 w-full font-bold hover:bg-rose-600'
+              className='text-white bg-red-600 rounded-lg px-5 py-2 my-2 w-full font-bold hover:bg-red-600'
               type='submit'
             >
               Send
@@ -96,7 +96,7 @@ const Contact: FC = (): ReactElement => {
               timeslots for an online meeting.
             </p>
             <p className='mt-8'>
-              Many thanks! • Rahul <span className='text-rose-500'>Dogra</span>
+              Many thanks! • Rahul <span className='text-red-500'>Dogra</span>
             </p>
           </div>
         </section>

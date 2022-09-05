@@ -1,7 +1,11 @@
 const TwitterSVG = () => (
-  <a href='https://twitter.com/_rahuldogra' target='_blank'>
+  <a
+    aria-label='Twitter Icon'
+    href='https://twitter.com/_rahuldogra'
+    target='_blank'
+  >
     <svg
-      fill='#ef4444'
+      className='fill-red-500'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 64 64'
       width='40px'

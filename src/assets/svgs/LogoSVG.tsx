@@ -15,7 +15,8 @@ const LogoSVG: FC<Props> = ({ width = 30, height = 30 }): ReactElement => (
     <g
       id='SvgjsG2884'
       transform='matrix(0.7719934992729088,0,0,0.7719934992729088,-2.2241133037993865,-2.2827847906021383)'
-      fill='#c8e7ed'
+      className='fill-slate-400'
+      // fill='#c8e7ed'
     >
       <g xmlns='http://www.w3.org/2000/svg'>
         <path d='M2.881,59.625v25.604l22.175,12.803L47.23,85.229V59.625L25.056,46.822L2.881,59.625z M37.778,79.772l-12.722,7.345   l-12.723-7.345v-14.69l12.723-7.346l12.722,7.346V79.772z'></path>
