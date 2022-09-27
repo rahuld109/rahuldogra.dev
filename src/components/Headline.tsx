@@ -48,7 +48,7 @@ const Socials = () => {
 
 const Headline = () => {
   return (
-    <>
+    <div className='container flex flex-col items-center justify-center w-screen h-screen'>
       <h2 className='text-[3rem] lg:text-[5rem] md:text-[5rem] font-extrabold'>
         Rahul <span className='text-red-500'>Dogra</span>
       </h2>
@@ -61,7 +61,7 @@ const Headline = () => {
         Until then checkout my other profiles. 🙏
       </p>
       <Socials />
-    </>
+    </div>
   );
 };
 

@@ -1,2 +1,7 @@
-User-agent: *
-Disallow: /contact
+User-agent: Googlebot-Image
+Disallow: /assets/
+
+User-Agent: *
+Allow: /
+
+Sitemap: https://rahuldogra.dev/sitemap-index.xml
