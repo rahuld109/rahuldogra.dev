@@ -1,0 +1,26 @@
+[
+  {
+    "logo": "logos:docker-icon",
+    "text": "Docker"
+  },
+  {
+    "logo": "vscode-icons:file-type-aws",
+    "text": "AWS"
+  },
+  {
+    "logo": "logos:jenkins",
+    "text": "Jenkins"
+  },
+  {
+    "logo": "logos:travis-ci",
+    "text": "Travis"
+  },
+  {
+    "logo": "logos:rabbitmq-icon",
+    "text": "RabbitMQ"
+  },
+  {
+    "logo": "logos:strapi-icon",
+    "text": "Strapi"
+  }
+]

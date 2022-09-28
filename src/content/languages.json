@@ -1,0 +1,22 @@
+[
+  {
+    "logo": "logos:javascript",
+    "text": "JavaScript"
+  },
+  {
+    "logo": "logos:typescript-icon",
+    "text": "TypeScript"
+  },
+  {
+    "logo": "logos:go",
+    "text": "Go"
+  },
+  {
+    "logo": "logos:python",
+    "text": "Python"
+  },
+  {
+    "logo": "logos:php",
+    "text": "Php"
+  }
+]
