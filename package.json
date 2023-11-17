@@ -1,7 +1,28 @@
 {
-  "name": "new-rahuldogra-dev",
+  "name": "rahuldogra-dev",
+  "description": "Rahul Dogra Software engineering portfolio",
   "type": "module",
   "version": "2.0.0",
+  "author": {
+    "name": "Rahul Dogra"
+  },
+  "keywords": [
+    "typescript",
+    "astro",
+    "html",
+    "tailwind",
+    "typed.js",
+    "portfolio"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/irahuldogra/rahuldogra.dev.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/irahuldogra/rahuldogra.dev/issues"
+  },
+  "homepage": "https://github.com/irahuldogra/rahuldogra.dev",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://new-rahuldogra-dev.vercel.app',
+  site: 'https://www.rahuldogra.dev',
   vite: {
     ssr: {
       external: ['svgo'],
