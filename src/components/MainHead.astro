@@ -40,15 +40,45 @@ const canonicalURL = new URL(Astro.url).href;
   <meta name="author" content="Rahul Dogra" />
   <meta name="apple-mobile-web-app-title" content="Rahul Dogra Studio" />
   <meta name="msapplication-TileColor" content="#030617" />
-  <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+  <meta name="msapplication-TileImage" content="/static/mstile-144x144.png" />
   <meta name="theme-color" content="#030617" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/static/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/static/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/static/favicon-16x16.png"
+  />
+
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#030617" />
+  <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#030617" />
   <link rel="canonical" href={canonicalURL} />
 
   <title class="font-bold">{title}</title>
+
+  <script
+    type="text/partytown"
+    src="https://www.googletagmanager.com/gtag/js?id=G-E6RXKZF2HC"></script>
+  <script type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-E6RXKZF2HC', {
+      cookie_flags: 'HttpOnly;Secure;SameSite=Strict',
+    });
+  </script>
 </head>

@@ -10,12 +10,6 @@ import { Icon } from 'astro-icon';
       <a href="/">Rahul Dogra</a>
     </h1>
 
-    <div id="typed-strings">
-      <p class="hidden">Experienced Front-End Engineer</p>
-      <p class="hidden">Experienced Back-End Engineer</p>
-      <p class="hidden">Experienced Full-Stack Engineer</p>
-    </div>
-
     <h2
       class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl"
     >
@@ -68,7 +62,11 @@ import { Icon } from 'astro-icon';
   import Typed from 'typed.js';
 
   new Typed('#typed', {
-    stringsElement: '#typed-strings',
+    strings: [
+      'Experienced Front-End Engineer',
+      'Experienced Back-End Engineer',
+      'Experienced Full-Stack Engineer',
+    ],
     typeSpeed: 60,
     loop: true,
     backSpeed: 60,
