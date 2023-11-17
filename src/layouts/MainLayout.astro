@@ -1,5 +1,6 @@
 ---
-import Navlink from '@components/Navlink.astro';
+import MainHead from '../components/MainHead.astro';
+import MainHeader from '../components/MainHeader.astro';
 
 export interface Props {
   title?: string;
@@ -22,64 +23,28 @@ const {
   heroImage = defaultMeta.image,
   imageAlt = defaultMeta.imageAlt,
 } = Astro.props as Props;
-
-const socialImageURL = new URL(`/static/${heroImage}`, Astro.site);
-const canonicalURL = new URL(Astro.url).href;
 ---
 
-<html lang='en' class='scroll-smooth'>
-  <head>
-    <meta charset='utf-8' />
-    <meta name='viewport' content='width=device-width' />
-    <title class='font-bold'>{title}</title>
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <link rel='canonical' href={canonicalURL} />
-    <meta name='title' content={title} />
-    <meta name='description' content={description} />
-    <meta property='og:type' content='website' />
-    <meta property='og:url' content={canonicalURL} />
-    <meta property='og:title' content={title} />
-    <meta property='og:description' content={description} />
-    <meta property='og:image' content={socialImageURL} />
-    <meta property='og:site_name' content='Rahul Dogra Studio' />
-    <meta property='og:image:alt' content={imageAlt} />
-    <meta property='og:locale' content='en' />
-    <meta property='article:published_time' content='' />
-    <meta property='twitter:card' content='summary_large_image' />
-    <meta property='twitter:url' content={canonicalURL} />
-    <meta name='twitter:site' content='@_rahuldogra' />
-    <meta name='twitter:creator' content='@_rahuldogra' />
-    <meta property='twitter:title' content={title} />
-    <meta property='twitter:label' content='Written by' />
-    <meta property='twitter:description' content={description} />
-    <meta property='twitter:image' content={socialImageURL} />
-    <meta name='generator' content={Astro.generator} />
-    <meta name='robots' content='follow, index' />
-    <meta name='author' content='Rahul Dogra' />
-  </head>
-
+<html lang="en">
+  <MainHead
+    title={title}
+    description={description}
+    heroImage={heroImage}
+    imageAlt={imageAlt}
+  />
   <body
-    class='scrollbar-thin scrollbar-thumb-red-600 scrollbar-track-zinc-800 hover:scrollbar-thumb-red-500 bg-zinc-900 antialiased selection:bg-red-600 selection:text-white py-8'
+    class="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900"
+    data-new-gr-c-s-check-loaded="14.1138.0"
+    data-gr-ext-installed=""
+    cz-shortcut-listen="true"
   >
-    <nav
-      class='mb-16 mx-auto flex items-center justify-start overflow-x-auto sm:overflow-x-visible px-3 w-5/6 max-w-min rounded-2xl ring-1 ring-zinc-700/80 bg-zinc-800/60 sm:w-auto'
+    <div
+      class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
     >
-      <Navlink href='/' text='Home' />
-      <Navlink
-        href='https://www.linkedin.com/in/irahuldogra'
-        rel='noopener noreferrer'
-        target='_blank'
-        text='LinkedIn'
-      />
-      <Navlink
-        href='https://github.com/irahuldogra'
-        target='_blank'
-        rel='noopener noreferrer'
-        text='GitHub'
-      />
-    </nav>
-    <main class='px-6 lg:px-0 mx-auto max-w-3xl'>
-      <slot />
-    </main>
+      <div class="lg:flex lg:justify-between lg:gap-4">
+        <MainHeader />
+        <slot />
+      </div>
+    </div>
   </body>
 </html>

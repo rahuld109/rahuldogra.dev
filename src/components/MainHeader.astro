@@ -1,0 +1,76 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<header
+  class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
+>
+  <div>
+    <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+      <a href="/">Rahul Dogra</a>
+    </h1>
+
+    <div id="typed-strings">
+      <p class="hidden">Experienced Front-End Engineer</p>
+      <p class="hidden">Experienced Back-End Engineer</p>
+      <p class="hidden">Experienced Full-Stack Engineer</p>
+    </div>
+
+    <h2
+      class="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl"
+    >
+      <span id="typed"></span>
+    </h2>
+
+    <p class="mt-4 max-w-xs leading-normal">
+      I build exceptional and accessible digital solutions for the web and
+      mobile.
+    </p>
+  </div>
+  <ul class="ml-1 mt-8 flex items-center" aria-label="Social media">
+    <li class="mr-5 text-xs">
+      <a
+        class="block hover:text-slate-200"
+        href="https://github.com/irahuldogra"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span class="sr-only">GitHub</span>
+        <Icon class="h-6 w-6" name="github" />
+      </a>
+    </li>
+    <li class="mr-5 text-xs">
+      <a
+        class="block hover:text-slate-200"
+        href="https://twitter.com/rahuld109"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span class="sr-only">Twitter</span>
+        <Icon class="h-6 w-6" name="twitter" />
+      </a>
+    </li>
+    <li class="mr-5 text-xs">
+      <a
+        class="block hover:text-slate-200"
+        href="https://www.linkedin.com/in/rahuld109/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span class="sr-only">LinkedIn</span>
+        <Icon class="h-6 w-6" name="linkedin" />
+      </a>
+    </li>
+  </ul>
+</header>
+
+<script>
+  import Typed from 'typed.js';
+
+  new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 60,
+    loop: true,
+    backSpeed: 60,
+  });
+</script>

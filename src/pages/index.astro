@@ -1,60 +1,10 @@
 ---
-import MainLayout from '@layouts/MainLayout.astro';
-import authorImage from '@images/me.jpeg';
-import { Image } from '@astrojs/image/components';
-import technologies from '@content/technologies.json';
-import languages from '@content/languages.json';
-import others from '@content/others.json';
-import Skill from '@components/Skill.astro';
+import About from '../components/About.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout>
-  <section class='mb-8 sm:mb-14 sm:flex sm:items-center sm:justify-between'>
-    <Image
-      src={authorImage}
-      alt='Image of the author'
-      format='webp'
-      width={320}
-      height={320}
-      quality={80}
-      loading='eager'
-      class='rounded-full w-40 overflow-hidden'
-    />
-    <header class='mt-8 max-w-lg sm:my-0 sm:order-first'>
-      <h1 class='mb-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-        Rahul <span class='text-red-600'>Dogra</span>
-      </h1>
-      <h2 class='mb-4 text-zinc-300'>Full Stack Developer</h2>
-      <p
-        class='w-full font-normal leading-7 text-zinc-400 sm:max-w-sm md:max-w-xl'
-      >
-        Welcome to my slice of the internet! I'm a full stack developer with
-        almost 2 years of experience working with corporate, startups, and
-        individuals. I enjoy building website and experimenting with cutting
-        edge web technologies.
-      </p>
-    </header>
-  </section>
-  <section class='mb-8 sm:mb-14'>
-    <h2 class='text-zinc-300 mb-4 text-2xl font-bold tracking-tight'>
-      Favorite Tools
-    </h2>
-    <p class='w-full mb-4 font-normal leading-7 text-zinc-400'>
-      I love exploring new libraries, programing languages and frameworks. Here
-      is a list of technologies that I have worked with professionally, side
-      projects and open source.
-    </p>
-    <h3 class='text-zinc-300 text-xl tracking-tight mb-4'>Languages</h3>
-    <div class='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 mb-4'>
-      {languages.map((language) => <Skill {...language} />)}
-    </div>
-    <h3 class='text-zinc-300 text-xl tracking-tight mb-4'>Technologies</h3>
-    <div class='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 mb-4'>
-      {technologies.map((tech) => <Skill {...tech} />)}
-    </div>
-    <h3 class='text-zinc-300 text-xl tracking-tight mb-4'>Others</h3>
-    <div class='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 mb-4'>
-      {others.map((other) => <Skill {...other} />)}
-    </div>
-  </section>
+  <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
+    <About />
+  </main>
 </MainLayout>
