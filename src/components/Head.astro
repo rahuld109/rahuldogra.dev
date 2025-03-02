@@ -1,13 +1,12 @@
 ---
 export interface Props {
-  title?: string;
-  description?: string;
-  heroImage?: string;
-  imageAlt?: string;
+	title?: string;
+	description?: string;
+	heroImage?: string;
+	imageAlt?: string;
 }
 
 const { title, description, heroImage, imageAlt } = Astro.props as Props;
-
 const socialImageURL = new URL(`/static/${heroImage}`, Astro.site);
 const canonicalURL = new URL(Astro.url).href;
 ---
