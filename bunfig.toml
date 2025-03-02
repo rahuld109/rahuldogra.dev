@@ -1,0 +1,3 @@
+[install]
+# This ensures bun uses the bun.lockb file
+lockfile = true

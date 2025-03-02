@@ -30,6 +30,7 @@
 	"overrides": [
 		{
 			"include": ["*.astro"],
+			"ignore": [".astro/**/*"],
 			"linter": {
 				"rules": {
 					"style": {
